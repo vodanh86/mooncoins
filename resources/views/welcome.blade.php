@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 <html lang="en">
   @include('includes.header')
   <body>
-
+  @include('includes.tag')
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
