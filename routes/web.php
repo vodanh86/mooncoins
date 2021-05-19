@@ -24,13 +24,13 @@ Route::get('/newsletter', 'PageController@newsletter');
 Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
 
-Route::get('api/promotedCoins', 'apiController@getPromotedCoins');
-Route::get('api/bestCoins', 'apiController@getBestCoins');
-Route::get('api/todayCoins', 'apiController@getTodayCoins');
-Route::get('api/yourCoins', 'apiController@getYourCoins');
-Route::get('api/updateVote', 'apiController@updateVote');
-Route::get('api/getComments', 'apiController@getComments');
-Route::get('api/addComment', 'apiController@addComment');
+Route::get('api/promotedCoins', 'ApiController@getPromotedCoins');
+Route::get('api/bestCoins', 'ApiController@getBestCoins');
+Route::get('api/todayCoins', 'ApiController@getTodayCoins');
+Route::get('api/yourCoins', 'ApiController@getYourCoins');
+Route::get('api/updateVote', 'ApiController@updateVote');
+Route::get('api/getComments', 'ApiController@getComments');
+Route::get('api/addComment', 'ApiController@addComment');
 Route::get('coin/{id}', 'PageController@viewCoin');
 
 Route::post('coin', [

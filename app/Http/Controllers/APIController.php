@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\AdminRoleUsers;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
-class APIController extends Controller
+class ApiController extends Controller
 {
     /**
      * @var bool
