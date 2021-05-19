@@ -40,7 +40,7 @@
                         <input type="text" style="z-index:-100; position: absolute; width:10px" id="inp_contract"/>
                         <span  id="span_contract" style="display:none">{{ $coin['contract'] }}</span>
                         <span class="Coin_AddressTitle" style="cursor: pointer;">Binance Smart Chain: </span>
-                        <span id="address0" class="Coin_Address__YsLPG" style="cursor: pointer;">{{ $coin['contract'] }}</span>
+                        <span id="address0" class="Coin_Address__YsLPG" style="cursor: pointer;word-break: break-word">{{ $coin['contract'] }}</span>
                         <div class="Coin_CopyIcon">
                           <img id="img_contract" src="{{ URL::asset('/images/copyIcon.png') }}" onClick="copyToClipboard('span_contract')" style="max-width: 100%; max-height: 100%;">
                           </div>
