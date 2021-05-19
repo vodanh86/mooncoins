@@ -26,11 +26,12 @@
                       <div class="col-sm-3 col-md-3 col-lg-3"><img src='{{$coin["logo"]}}' style="width:90px;"/></div>
                       <div class="col-sm-9 col-md-9 col-lg-9">
                      <h4>{{$coin["name"]."(".$coin["symbol"].")"}}</h4>
-                     @foreach(array("facebook", "twitter", "telegram", "youtube", "website", "instagram") as $network)
-                        @if($coin[$network])
-                          <a target="_blank" href="{{$coin[$network]}}" class="btn btn-primary">{{$network}}</a>
-                        @endif
-                    @endforeach
+                     <?php
+                     $links = json_decode($coin["links"], true);
+                     foreach($links as $link){
+                     ?>
+                          <a target="_blank" href="{{$link['value']}}" class="btn btn-primary">{{$link["name"]}}</a>
+                    <?php } ?>
                     </div>
                     </div>
                    <div class="row-wrap"><h5>Contract<h5></div>
