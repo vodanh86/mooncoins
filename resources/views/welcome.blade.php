@@ -132,6 +132,7 @@ use Illuminate\Support\Facades\Auth;
         @endif
         $('#promoted_coins').dataTable( {
           ajax: 'api/promotedCoins',
+          responsive: true,
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
@@ -139,6 +140,7 @@ use Illuminate\Support\Facades\Auth;
 
         $('#best_coins').dataTable( {
           ajax: 'api/bestCoins',
+          responsive: true,
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
@@ -146,6 +148,7 @@ use Illuminate\Support\Facades\Auth;
 
         $('#today_coins').dataTable( {
           ajax: 'api/todayCoins',
+          responsive: true,
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
@@ -153,6 +156,7 @@ use Illuminate\Support\Facades\Auth;
         @if(Auth::user())
         $('#your_coins').dataTable( {
           ajax: 'api/yourCoins',
+          responsive: true,
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']

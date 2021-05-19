@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="{{url('public/css/aos.css')}}">
 <link rel="stylesheet" href="{{url('public/css/style.css')}}">
 <link rel="stylesheet" href="{{url('public/css/jquery.dataTables.css')}}">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
