@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 	  @include('includes.menu')
 
-    <div class="block-schedule overlay site-section" style="background-image: url('images/bitcoin-moon.jpeg');">
+    <div class="block-schedule overlay site-section" style="background-image: url('public/images/bitcoin-moon.jpeg');">
       <div class="container">
          <div class="tab-pane fade show active" id="pills-sunday" role="tabpanel" aria-labelledby="pills-sunday-tab">
             <div class="row-wrap">

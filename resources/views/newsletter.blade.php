@@ -33,7 +33,7 @@
                 <button type="button" class="btn btn-primary" onclick="subcribe()" style="width: 100%;">Submit</button></div>
           </div>
           <div class="col-md-12 col-lg-6 ml-auto">
-            <img src="{{ URL::asset('images/moon1.jpeg') }}" alt="Image" class="img-fluid">
+            <img src="{{ URL::asset('public/images/moon1.jpeg') }}" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>

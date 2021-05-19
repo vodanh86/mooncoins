@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Auth;
         </div>
     </div>
 
-    <div class="block-schedule overlay site-section" style="background-image: url('images/bitcoin-moon.jpeg');">
+    <div class="block-schedule overlay site-section" style="background-image: url('public/images/bitcoin-moon.jpeg');">
       <div class="container">
 
         <h2 class="text-white display-4 mb-5">Promoted coins</h2>

@@ -16,7 +16,7 @@
 
 	  @include('includes.menu')
 
-    <div class="block-schedule overlay site-section" style="background-image: url('images/bitcoin-moon.jpeg');">
+    <div class="block-schedule overlay site-section" style="background-image: url('public/images/bitcoin-moon.jpeg');">
       <div class="container">
 
         <ul class="nav nav-pills tab-nav mb-4" id="pills-tab" role="tablist">

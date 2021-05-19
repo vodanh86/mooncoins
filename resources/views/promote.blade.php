@@ -32,7 +32,7 @@ Mail to: contact@coinhunt.cc</li>
             <p><a href="mailto:someone@example.com" class="btn btn-success pill px-4">Mail</a></p>
           </div>
           <div class="col-md-12 col-lg-6 ml-auto">
-            <img src="{{ URL::asset('images/moon.jpeg') }}" alt="Image" class="img-fluid">
+            <img src="{{ URL::asset('public/images/moon.jpeg') }}" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
