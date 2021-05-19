@@ -133,6 +133,10 @@ use Illuminate\Support\Facades\Auth;
         $('#promoted_coins').dataTable( {
           ajax: 'api/promotedCoins',
           responsive: true,
+          columnDefs: [
+              { responsivePriority: 1, targets: 1 },
+              { responsivePriority: 2, targets: -1 }
+          ],
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
@@ -141,6 +145,10 @@ use Illuminate\Support\Facades\Auth;
         $('#best_coins').dataTable( {
           ajax: 'api/bestCoins',
           responsive: true,
+          columnDefs: [
+              { responsivePriority: 1, targets: 1 },
+              { responsivePriority: 2, targets: -1 }
+          ],
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
@@ -149,6 +157,10 @@ use Illuminate\Support\Facades\Auth;
         $('#today_coins').dataTable( {
           ajax: 'api/todayCoins',
           responsive: true,
+          columnDefs: [
+              { responsivePriority: 1, targets: 1 },
+              { responsivePriority: 2, targets: -1 }
+          ],
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
@@ -157,6 +169,10 @@ use Illuminate\Support\Facades\Auth;
         $('#your_coins').dataTable( {
           ajax: 'api/yourCoins',
           responsive: true,
+          columnDefs: [
+              { responsivePriority: 1, targets: 1 },
+              { responsivePriority: 2, targets: -1 }
+          ],
           columns: columns,
           lengthChange: false,
           "order": [4, 'desc']
