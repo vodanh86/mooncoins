@@ -16,7 +16,7 @@
 
 	  @include('includes.menu')
 
-    <div class="block-schedule overlay site-section" style="background-image: url('{{ URL::asset('/images/bitcoin-moon.jpeg') }}');">
+    <div class="block-schedule overlay site-section" style="background-image: url('{{ URL::asset('public/images/bitcoin-moon.jpeg') }}');">
       <div class="container">
         <h2 class="text-white display-4 mb-5">{{$coin["name"]}}</h2>
             <div class="row-wrap">
@@ -42,7 +42,7 @@
                         <span class="Coin_AddressTitle" style="cursor: pointer;">Binance Smart Chain: </span>
                         <span id="address0" class="Coin_Address__YsLPG" style="cursor: pointer;word-break: break-word">{{ $coin['contract'] }}</span>
                         <div class="Coin_CopyIcon">
-                          <img id="img_contract" src="{{ URL::asset('/images/copyIcon.png') }}" onClick="copyToClipboard('span_contract')" style="max-width: 100%; max-height: 100%;">
+                          <img id="img_contract" src="{{ URL::asset('public/images/copyIcon.png') }}" onClick="copyToClipboard('span_contract')" style="max-width: 100%; max-height: 100%;">
                           </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
       </div>      
     </div>
 
-    <div class="block-schedule overlay site-section" style="background-image: url('{{ URL::asset('/images/bitcoin-moon.jpeg') }}');">
+    <div class="block-schedule overlay site-section" style="background-image: url('{{ URL::asset('public/images/bitcoin-moon.jpeg') }}');">
       <div class="container">
             <div class="row-wrap" >
               <div class="row bg-white p-4 align-items-center" >
