@@ -115,6 +115,29 @@ class ApiController extends Controller
         return $this->checkIp($promotedCoins);
     }
 
+    public function updateVoteCoin(Request $request)
+    {
+        $coin = Coin::find($request->id);
+        $notVoted = false;
+        if ($coin["ips"]){
+            if (strpos($coin["ips"].",", $_SERVER['REMOTE_ADDR'].",") === false) {            
+                $coin["vote"] += 1;
+                $coin["ips"] = str_replace(",,", ",", $coin["ips"].$_SERVER['REMOTE_ADDR'].",");
+                $coin->save();
+            } else {
+                $coin["vote"] -= 1;
+                $coin["ips"] = str_replace($_SERVER['REMOTE_ADDR'].",", "", $coin["ips"].",");
+                $coin->save();
+            }
+        } else {
+            $coin["vote"] += 1;
+            $coin["ips"] = str_replace(",,", ",", $coin["ips"].$_SERVER['REMOTE_ADDR'].",");
+            $coin->save();
+        }
+
+        return view('vote', ["coin" => $this->checkIp(array($coin))["data"][0]]);
+    }
+
     public function checkIp($coins){
         $updatedCoins = array();
         foreach($coins as $i => $coin){

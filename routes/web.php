@@ -24,6 +24,7 @@ Route::get('/newsletter', 'PageController@newsletter');
 Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
 
+Route::get('api/updateVoteCoin', 'ApiController@updateVoteCoin');
 Route::get('api/promotedCoins', 'ApiController@getPromotedCoins');
 Route::get('api/bestCoins', 'ApiController@getBestCoins');
 Route::get('api/todayCoins', 'ApiController@getTodayCoins');

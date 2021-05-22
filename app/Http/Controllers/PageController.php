@@ -36,7 +36,7 @@ class PageController extends Controller
         }
 
         return view('view', [
-            'coin' => $coin,
+            'coin' => $this->checkIp(array($coin))[0],
             'user' => $user
         ]);
     }

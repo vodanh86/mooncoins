@@ -34,6 +34,17 @@
                     <?php } ?>
                     </div>
                     </div>
+                   <div class="row">
+                      <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="row-wrap">
+                          <h5>Vote</h5>
+                        </div>
+                     </div>
+                     <div class="col-sm-4 col-md-4 col-lg-4" id="voteCount">
+                        <?php $id = $coin["id"] ?>
+                        <a href="#" onclick="return vote('{{$id}}')" class="btn {{$coin['voted'] == 0 ? 'btn-success' : 'btn-info'}} pill px-4 mt-3 mt-md-0">{{$coin["vote"]}}</a>
+                     </div>
+                    </div>
                    <div class="row-wrap"><h5>Contract<h5></div>
                    <div class="row-wrap">
                       <div class="Coin_AddressContainer">
@@ -112,6 +123,17 @@
           document.getElementById("inp_contract").select();
           document.getElementById("img_contract").src = document.getElementById("img_contract").src.replace("copyIcon", "tick");
           document.execCommand('copy');
+      }
+      function vote(id) {
+        $.ajax("../api/updateVoteCoin", {
+          data: {id : id},
+          success: function(data) { 
+              $('#voteCount').html(data);
+            },
+            error: function() {
+            }
+        });
+        return false;
       }
       $(document).ready(function() {
           $.ajax("../api/getComments", {
